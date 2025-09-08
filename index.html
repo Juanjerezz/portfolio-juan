@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Juan</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Secciones -->
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/images/fondo.mp4" type="video/mp4">
+        Tu navegador no soporta videos de fondo.
+      </video>
+
+      <div class="hero-text">
+        <h1>Hola, <br> soy <span>Juan</span> </h1>
+        <p>Estudiante de Ingeniería en Informática con interés en datos e inteligencia artificial.</p>
+        <a href="#contact" class="btn">Contacto</a>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+
+
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="assets/images/mi-foto.png" alt="Foto de Juan">
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            ¡Hola! Soy <strong>Juan Jerez</strong>, estudiante de Ingeniería en Informática en UADE, actualmente cursando 3er Año.
+            Tengo un gran interés en <strong>análisis de datos</strong>, <strong>desarrollo web</strong> 
+            e <strong>inteligencia artificial</strong>. 
+          </p>
+          <p>
+            Me apasiona aplicar mis conocimientos técnicos para resolver problemas reales,
+            trabajar en equipo y seguir aprendiendo constantemente. 
+            He complementado mi formación con cursos de Python, SQL, Power BI, Excel,
+            desarrollo web y herramientas de visualización de datos.
+          </p>
+          <p>
+            Además de mis habilidades técnicas, destaco por mi
+            <em>comunicación efectiva, adaptabilidad y pensamiento crítico</em>,
+            lo que me permite desenvolverse en distintos entornos y aportar soluciones creativas.
+          </p>
+          <a href="#projects" class="btn">Ver Proyectos</a>
+        </div>
+        <div class="about-img">
+  <div class="skills-container">
+    <div class="skills-category">
+      <h3>Lenguajes & Bases de Datos</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-category">
+      <h3>Herramientas de Análisis</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fas fa-chart-bar"></i>
+          <span>Power BI</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-table"></i>
+          <span>Excel</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-chart-pie"></i>
+          <span>Looker Studio</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-wrench"></i>
+          <span>Power Query</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-category">
+      <h3>Librerías & Tools</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fas fa-table"></i>
+          <span>Pandas</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-calculator"></i>
+          <span>NumPy</span>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-tasks"></i>
+          <span>Trello</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+<section id="projects" class="section projects">
+  <h2>Portfolio</h2>
+  <p>
+    Una colección de proyectos que demuestran mis habilidades técnicas, mi capacidad para resolver problemas y mi pasión por los datos. Cada proyecto refleja mi dedicación a aplicar mis conocimientos a desafíos reales y crear soluciones impactantes.
+  </p>
+
+  <!-- Botones de categorías -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">ALL</button>
+    <button class="filter-btn" data-filter="python">PYTHON</button>
+    <button class="filter-btn" data-filter="Sql-Server">SQL SERVER</button>
+    <button class="filter-btn" data-filter="Power-BI">POWER BI</button>
+    <button class="filter-btn" data-filter="Power-Query">POWER QUERY</button>
+  </div>
+
+  <!-- Grid de proyectos -->
+  <div class="project-grid">
+    <article class="project-card" data-category="Power-BI Sql-Server">
+      <img src="assets/images/DashboardBisblick.png" alt="Power-BI">
+      <h3>Dashboard Power Bi</h3>
+      <p>El tablero fue desarrollado utilizando Power BI, conectado directamente a los datos de la base de datos SQL del sistema de gestión de becados.</p>
+      <div class="project-tools">
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">Sql server</span>
+      </div>
+      <a href="#" class="project-link">Ver Proyecto</a>
+    </article>
+
+    <article class="project-card" data-category="Sql-Server">
+      <img src="assets/images/BD-Bisblick.jpg" alt="MySQL Project">
+      <h3>Sistema de Base de Datos Relacional</h3>
+      <p>Diseño e implementación de una base de datos relacional que permite registrar, consultar, actualizar y analizar la información de los becados, facilitando el seguimiento académico, laboral y social de cada uno.</p>
+      <div class="project-tools">
+        <span class="tool-tag">Sql server</span>
+      </div>
+      <a href="#" class="project-link">Ver Proyecto</a>
+    </article>
+
+    <article class="project-card" data-category="Power-BI Power-Query">
+      <img src="assets/images/DashboardCovid.png" alt="Tableau Dashboard">
+      <h3>Dashboard de COVID-19 en CABA</h3>
+      <p>Dashboard en Power BI sobre casos de COVID-19 en CABA 2024, con datos preparados en Power Query e indicadores clave por edad, género y barrios.</p>
+      <div class="project-tools">
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">Power Query</span>
+      </div>
+      <a href="#" class="project-link">Ver Proyecto</a>
+    </article>
+
+    <article class="project-card" data-category="python Power-BI">
+      <img src="assets/images/DashboardNetflix.png" alt="netflix Project">
+      <h3>Dashboard de Netflix</h3>
+      <p>Análisis del catálogo de Netflix con Pandas y visualización en Power BI para explorar clasificaciones, países y tendencias de estrenos.</p>
+      <div class="project-tools">
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">Power BI</span>
+      </div>
+      <a href="#" class="project-link">Ver Proyecto</a>
+    </article>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates" class="section certificates">
+  <h2>Certificados</h2>
+  <div class="certificates-container">
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/ef-set-english.jpg" alt="EF SET English Certificate" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>EF SET English Certificate</h3>
+        <p>Certificado de inglés nivel C1 Advanced (64/100). Competencia avanzada en reading, listening, writing y speaking según el Marco Común Europeo.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Jul 2025</span>
+          <span class="certificate-issuer">EF Standard English Test</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/sql-intermedio.jpg" alt="SQL Intermedio" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>SQL Intermedio</h3>
+        <p>Certificado por Sololearn - Nivel intermedio de SQL. Consultas avanzadas, joins complejos, subconsultas y optimización de bases de datos.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Jun 2025</span>
+          <span class="certificate-issuer">Sololearn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/frontend-js.jpg" alt="Front-End JS" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>Front-End JS</h3>
+        <p>Certificado por el Ministerio de Educación - 80 horas. Curso de desarrollo front-end con JavaScript en Talento Tech, Agencia de Habilidades para el Futuro.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Abr 2025</span>
+          <span class="certificate-issuer">Ministerio de Educación</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/data-analytics-puerta18.jpg" alt="Data Analytics" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>Data Analytics</h3>
+        <p>Certificado por Fundación Puerta 18. Curso completo de análisis de datos para inserción laboral, cubriendo herramientas y técnicas fundamentales.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Abr 2025</span>
+          <span class="certificate-issuer">Fundación Puerta 18</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/fundamentos-analisis-datos.jpg" alt="Fundamentos profesionales del análisis de datos" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>Fundamentos Profesionales del Análisis de Datos</h3>
+        <p>Certificado por Microsoft y LinkedIn - 11h 28min. Cubre análisis de datos, visualización y analítica con herramientas profesionales del ecosistema Microsoft.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Feb 2025</span>
+          <span class="certificate-issuer">Microsoft & LinkedIn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <div class="certificate-image-container">
+        <img src="assets/images/sql-essential.jpg" alt="SQL Essential Training" class="certificate-image">
+      </div>
+      <div class="certificate-content">
+        <h3>SQL Essential Training</h3>
+        <p>Curso completo de SQL en LinkedIn Learning - 4h 34min. Fundamentos de consultas SQL, manipulación de datos y gestión de bases de datos relacionales.</p>
+        <div class="certificate-meta">
+          <span class="certificate-date">Feb 2025</span>
+          <span class="certificate-issuer">LinkedIn Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu email" required>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Juan Jerez - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
