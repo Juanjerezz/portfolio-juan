@@ -36,14 +36,17 @@
   <p>Estudiante de Ingeniería en Informática con interés en datos e inteligencia artificial.</p>
   <div class="hero-buttons">
     <a href="#contact" class="btn">Contacto</a>
-    <a href="#" class="btn btn-cv">
-      <i class="fas fa-download"></i>
-      Descargar CV
-    </a>
+    <a href="assets/Juan Jerez - CV .pdf" class="btn btn-cv" download="Juan Jerez - CV .pdf">
+  <i class="fas fa-download"></i>
+  Descargar CV
+</a>
+
   </div>
   <div class="socials">
-    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="#"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" 
+   rel="noopener noreferrer" ><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/Juanjerezz" target="_blank" 
+   rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
   </div>
 </div>
 
@@ -383,32 +386,33 @@
       </div>
       <h3 style="margin-top: 2rem;"><i class="fas fa-share-alt"></i> Sígueme</h3>
       <div class="social-links">
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" 
+   rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Juanjerezz" target="_blank" 
+   rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
     </div>
     
     <div class="contact-form-container">
-      <h3><i class="fas fa-paper-plane"></i> Envíame un Mensaje</h3>
-      <form class="contact-form">
-        <div class="form-group">
-          <input type="text" id="name" placeholder=" " required>
-          <label for="name">Tu nombre</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" placeholder=" " required>
-          <label for="email">Tu email</label>
-        </div>
-        <div class="form-group">
-          <textarea id="message" placeholder=" " required></textarea>
-          <label for="message">Tu mensaje</label>
-        </div>
-        <button type="submit">
-          <i class="fas fa-paper-plane"></i> Enviar Mensaje
-        </button>
-      </form>
+  <h3><i class="fas fa-paper-plane"></i> Envíame un Mensaje</h3>
+  <form class="contact-form" action="https://formspree.io/f/mdklbzwr" method="POST">
+    <div class="form-group">
+      <input type="text" id="name" name="name" placeholder=" " required>
+      <label for="name">Tu nombre</label>
     </div>
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder=" " required>
+      <label for="email">Tu email</label>
+    </div>
+    <div class="form-group">
+      <textarea id="message" name="message" placeholder=" " required></textarea>
+      <label for="message">Tu mensaje</label>
+    </div>
+    <button type="submit">
+      <i class="fas fa-paper-plane"></i> Enviar Mensaje
+    </button>
+  </form>
+</div>
   </div>
 </section>
   </main>
