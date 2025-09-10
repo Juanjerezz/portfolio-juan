@@ -3,7 +3,6 @@ const projectCards = document.querySelectorAll(".project-card");
 
 filterBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    // Quitar "active" de todos y agregar al actual
     filterBtns.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
@@ -23,59 +22,102 @@ filterBtns.forEach(btn => {
 });
 
 
-// Funcionalidad del menú hamburguesa
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   const body = document.body;
+  
+  // Detectar si es iOS
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
   // Alternar menú
-  hamburger.addEventListener('click', function() {
-    this.classList.toggle('active');
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
     
     // Prevenir scroll cuando el menú está abierto
     if (navLinks.classList.contains('active')) {
       body.style.overflow = 'hidden';
+      // Solución específica para iOS
+      if (isIOS) {
+        document.documentElement.style.position = 'fixed';
+        document.documentStyle.style.width = '100%';
+      }
     } else {
       body.style.overflow = 'auto';
+      if (isIOS) {
+        document.documentElement.style.position = '';
+        document.documentElement.style.width = '';
+      }
     }
     
     // Actualizar atributo ARIA
-    const isExpanded = this.classList.contains('active');
-    this.setAttribute('aria-expanded', isExpanded);
-  });
+    const isExpanded = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
+  }
 
-  // Cerrar menú al hacer clic en un enlace
+
+  hamburger.addEventListener('click', toggleMenu);
+  
+
+  hamburger.addEventListener('touchstart', function(e) {
+    e.preventDefault(); // Previene comportamiento por defecto
+    toggleMenu();
+  }, { passive: false });
+
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function() {
       hamburger.classList.remove('active');
       navLinks.classList.remove('active');
       body.style.overflow = 'auto';
+      
+      if (isIOS) {
+        document.documentElement.style.position = '';
+        document.documentElement.style.width = '';
+      }
+      
       hamburger.setAttribute('aria-expanded', 'false');
     });
+    
+    link.addEventListener('touchstart', function() {
+      this.style.opacity = '0.7';
+    }, { passive: true });
+    
+    link.addEventListener('touchend', function() {
+      this.style.opacity = '';
+    }, { passive: true });
   });
 
-  // Cerrar menú al hacer clic fuera
   document.addEventListener('click', function(event) {
-    if (!event.target.closest('.navbar') && navLinks.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      body.style.overflow = 'auto';
-      hamburger.setAttribute('aria-expanded', 'false');
+    if (navLinks.classList.contains('active') && 
+        !event.target.closest('.navbar') && 
+        !event.target.closest('.nav-links')) {
+      toggleMenu();
     }
   });
+  
+  let touchStartX = 0;
+  document.addEventListener('touchstart', function(e) {
+    if (navLinks.classList.contains('active')) {
+      touchStartX = e.changedTouches[0].screenX;
+    }
+  }, { passive: true });
+  
+  document.addEventListener('touchend', function(e) {
+    if (navLinks.classList.contains('active')) {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX - touchStartX > 50) {
+        toggleMenu();
+      }
+    }
+  }, { passive: true });
 
-  // Filtrado de proyectos
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Remover clase active de todos los botones
       filterButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Agregar clase active al botón clickeado
       button.classList.add('active');
       
       const filter = button.getAttribute('data-filter');
