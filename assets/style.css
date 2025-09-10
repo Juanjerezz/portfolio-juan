@@ -153,6 +153,21 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(11, 114, 133, 0.4);
 }
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-cv {
+  background: linear-gradient(135deg, #087f5b, #0ca678);
+  box-shadow: 0 4px 15px rgba(8, 127, 91, 0.3);
+}
+
+.btn-cv:hover {
+  box-shadow: 0 6px 20px rgba(8, 127, 91, 0.4);
+}
 
 .socials {
   display: flex;
