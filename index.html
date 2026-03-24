@@ -1,459 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portfolio</title>
+  <title>Juan Jerez | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio de Juan Jerez. Estudiante de Ingeniería en Informática orientado a Análisis de Datos y Business Intelligence."
+  >
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Navegación -->
   <header>
-  <nav class="navbar">
-    <div class="logo">Juan</div>
-    
-    <!-- Botón de menú hamburguesa - Mejorado para iOS -->
-    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-  <!-- Secciones -->
+    <nav class="navbar">
+      <div class="logo">Juan Jerez</div>
+
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#certificates">Certificaciones</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <!-- Hero -->
     <section id="home" class="hero">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="assets/images/fondo.mp4" type="video/mp4">
-        Tu navegador no soporta videos de fondo.
-      </video>
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/images/fondo.mp4" type="video/mp4">
+    Tu navegador no soporta videos de fondo.
+  </video>
 
-      <div class="hero-text">
-  <h1>Hola, <br> soy <span>Juan</span> </h1>
-  <p>Estudiante de Ingeniería en Informática, con interés en el mundo de los datos y la programación.</p>
-  <div class="hero-buttons">
-    <a href="#contact" class="btn">Contacto</a>
-    <a href="assets/Juan Jerez - CV .pdf" class="btn btn-cv" download="Juan Jerez - CV .pdf">
-  <i class="fas fa-download"></i>
-  Descargar CV
-</a>
+  <div class="hero-overlay"></div>
 
-  </div>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" 
-   rel="noopener noreferrer" ><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/Juanjerezz" target="_blank" 
-   rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
-  </div>
-</div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-kicker">PORTFOLIO PROFESIONAL</p>
 
-      <div class="hero-img">
-        <img src="assets/images/mi-foto.png" alt="Foto de Juan">
+      <h1>
+        Hola,<br>
+        soy <span>Juan Jerez</span>
+      </h1>
+
+      <p class="hero-description">
+        Estudiante de Ingeniería en Informática orientado a
+        <strong>Análisis de Datos</strong> y <strong>Business Intelligence</strong>.
+        Trabajo con SQL, Power BI, Power Query y Excel para transformar
+        datos en información útil para la toma de decisiones.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">Ver proyectos</a>
+        <a href="assets/Juan Jerez - CV .pdf" class="btn btn-cv" download="Juan Jerez - CV .pdf">
+          <i class="fas fa-download"></i>
+          Descargar CV
+        </a>
       </div>
-    </section>
 
-     <!-- About Me -->
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Juanjerezz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="hero-image-shape">
+        <img src="assets/images/mi-foto.png" alt="Foto de Juan Jerez">
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Sobre mí -->
     <section id="about" class="section about">
-      <h2>About Me</h2>
+      <h2>Sobre mí</h2>
+
       <div class="about-content">
         <div class="about-text">
-          <div class="intro-card">
-            <div class="profile-badge">
-              <img src="assets/images/mi-foto.png" alt="Juan Jerez">
-              <div class="badge-info">
-                <h3>Juan Jerez</h3>
-                <p>Estudiante de Ingeniería en Informática</p>
-                <span>UADE · 4to Año</span>
-              </div>
-            </div>
-            
-            <div class="about-paragraphs">
-              <p class="highlight">
-                  <i class="fas fa-rocket"></i>
-                  ¡Hola! Soy <strong>Juan Jerez</strong>, apasionado por el 
-                  <strong>análisis de datos</strong>, <strong>bases de datos</strong> 
-                  y la <strong>visualización de la información</strong>.
-              </p>
-              
-              <p>
-                <i class="fas fa-lightbulb"></i>
-                Me encanta aplicar mis conocimientos técnicos para resolver problemas reales,
-                trabajar en equipo y seguir aprendiendo constantemente. 
-                He complementado mi formación con cursos de Python, SQL, Power BI, Excel,
-                desarrollo web y herramientas de visualización de datos.
-              </p>
-              
-              <p>
-                <i class="fas fa-star"></i>
-                Además de mis habilidades técnicas, destaco por mi
-                <em>comunicación efectiva, adaptabilidad y pensamiento crítico</em>,
-                lo que me permite desenvolverme en distintos entornos y aportar soluciones creativas.
-              </p>
-            </div>
+          <p class="section-intro">
+            Soy estudiante de Ingeniería en Informática en UADE, con interés en
+            análisis de datos, visualización, bases de datos y herramientas de BI.
+            Me motiva transformar datos en información clara, accionable y útil para
+            el negocio.
+          </p>
+
+          <p>
+            Actualmente me desarrollo en proyectos donde combino consultas SQL,
+            modelado y transformación de datos, construcción de dashboards e
+            indicadores para facilitar el seguimiento de métricas y la toma de decisiones.
+          </p>
+
+          <p>
+            Me interesa seguir creciendo en roles de
+            <strong>Data Analyst</strong>, <strong>BI Analyst</strong> o posiciones
+            relacionadas con análisis, reporting y mejora de procesos basados en datos.
+          </p>
+
+          <div class="interest-tags">
+            <span class="interest-tag">Análisis de Datos</span>
+            <span class="interest-tag">Business Intelligence</span>
+            <span class="interest-tag">SQL</span>
+            <span class="interest-tag">Power BI</span>
+            <span class="interest-tag">Power Query</span>
+            <span class="interest-tag">Excel</span>
+            <span class="interest-tag">Visualización de Datos</span>
+            <span class="interest-tag">Bases de Datos</span>
           </div>
-          
-          <div class="interests">
-            <h3>Áreas de Interés</h3>
-            <div class="interest-tags">
-              <span class="interest-tag">Bases de Datos</span>
-              <span class="interest-tag">Analisis de Datos</span>
-              <span class="interest-tag">Ciencia de Datos</span>
-              <span class="interest-tag">Machine Learning</span>
-              <span class="interest-tag">Visualización de Datos</span>
-              <span class="interest-tag">Desarrollo Web</span>
-              <span class="interest-tag">Inteligencia Artificial</span>
-            </div>
-          </div>
-          
-          <a href="#projects" class="btn">
+
+          <a href="#experience" class="btn">
             <i class="fas fa-arrow-right"></i>
-            Ver Proyectos
+            Ver experiencia
           </a>
         </div>
-        
-        <div class="about-skills">
-          <div class="skills-header">
-            <h3>Mis Habilidades</h3>
-            <p>Tecnologías y herramientas que utilizo</p>
+
+        <div class="about-summary-card">
+  <h3 class="about-skills-title">Tecnologías y herramientas</h3>
+
+  <div class="about-skills-group">
+    <h4><i class="fas fa-database"></i> Datos y bases de datos</h4>
+    <div class="about-skills-grid">
+      <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+      <div class="skill-item"><i class="fas fa-server"></i><span>SQL Server</span></div>
+      <div class="skill-item"><i class="fas fa-table"></i><span>Excel</span></div>
+      <div class="skill-item"><i class="fas fa-wrench"></i><span>Power Query</span></div>
+    </div>
+  </div>
+
+  <div class="about-skills-group">
+    <h4><i class="fas fa-chart-column"></i> BI y visualización</h4>
+    <div class="about-skills-grid">
+      <div class="skill-item"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
+      <div class="skill-item"><i class="fas fa-chart-pie"></i><span>Looker Studio</span></div>
+      <div class="skill-item"><i class="fas fa-bolt"></i><span>DAX</span></div>
+      <div class="skill-item"><i class="fas fa-cloud"></i><span>Power BI Service</span></div>
+    </div>
+  </div>
+
+  <div class="about-skills-group">
+    <h4><i class="fas fa-code"></i> Programación y herramientas</h4>
+    <div class="about-skills-grid">
+      <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+      <div class="skill-item"><i class="fas fa-book"></i><span>Jupyter</span></div>
+      <div class="skill-item"><i class="fas fa-project-diagram"></i><span>Agile</span></div>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience" class="section experience">
+  <h2>Experiencia</h2>
+  <p class="section-description">
+    Experiencia orientada a análisis, visualización de datos y soporte a reportes de negocio.
+  </p>
+
+  <div class="experience-timeline">
+    <div class="timeline-line"></div>
+
+    <article class="experience-card">
+      <div class="timeline-dot"></div>
+
+      <div class="experience-card-inner">
+        <div class="experience-header">
+          <div class="experience-header-left">
+            <div class="experience-logo">GH</div>
+            <div>
+              <h3>Pasantía en Análisis de Datos</h3>
+              <h4>Grupo Harmony S.A.</h4>
+            </div>
           </div>
-          
-          <div class="skills-container">
-            <div class="skills-category">
-              <h4><i class="fas fa-code"></i> Lenguajes & Bases de Datos</h4>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-js"></i>
-                  <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-java"></i>
-                  <span>Java</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-database"></i>
-                  <span>SQL</span>
-                </div>
-              </div>
+          <span class="experience-date">Sep 2025 – Mar 2026</span>
+        </div>
+
+        <p>
+          Participación en tareas de análisis de datos, construcción de reportes e indicadores,
+          consultas sobre SQL Server y mantenimiento de dashboards publicados para distintas áreas.
+        </p>
+
+        <ul class="experience-list">
+          <li>Elaboración y mantenimiento de reportes y KPIs en Power BI.</li>
+          <li>Consultas y análisis de datos en SQL Server.</li>
+          <li>Transformación y preparación de información con Power Query y Excel.</li>
+          <li>Monitoreo de dashboards y actualizaciones en Power BI Service.</li>
+          <li>Soporte a la toma de decisiones mediante visualizaciones e insights accionables.</li>
+        </ul>
+
+        <div class="project-tools">
+          <span class="tool-tag">SQL Server</span>
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">Power Query</span>
+          <span class="tool-tag">Excel</span>
+          <span class="tool-tag">Power BI Service</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="section projects">
+      <h2>Proyectos</h2>
+      <p class="section-description">
+        Proyectos académicos y personales enfocados en análisis de datos, bases de datos y visualización.
+      </p>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="sql-server">SQL Server</button>
+        <button class="filter-btn" data-filter="power-bi">Power BI</button>
+        <button class="filter-btn" data-filter="power-query">Power Query</button>
+        <button class="filter-btn" data-filter="looker-studio">Looker Studio</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" data-category="looker-studio">
+          <img src="assets/images/DataWiseConsulting.png" alt="Dashboard de análisis de ventas 2024">
+          <h3>Dashboard de Análisis de Ventas 2024</h3>
+          <p>
+            Dashboard desarrollado en Looker Studio para analizar el desempeño comercial,
+            con KPIs, filtros y visualizaciones orientadas al seguimiento de ventas y apoyo
+            a la toma de decisiones.
+          </p>
+          <div class="project-tools">
+            <span class="tool-tag">Looker Studio</span>
+          </div>
+          <a href="https://github.com/Juanjerezz/proyecto-final-business-intelligence" class="project-link" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+          </a>
+        </article>
+
+        <article class="project-card" data-category="power-bi sql-server">
+          <img src="assets/images/DashboardBisblick.png" alt="Dashboard en Power BI conectado a SQL Server">
+          <h3>Dashboard de Gestión de Becados</h3>
+          <p>
+            Tablero desarrollado en Power BI conectado a una base de datos SQL Server,
+            diseñado para visualizar indicadores y facilitar el seguimiento de información
+            académica, social y laboral.
+          </p>
+          <div class="project-tools">
+            <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">SQL Server</span>
+          </div>
+          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick/tree/master/dashboard" class="project-link" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+          </a>
+        </article>
+
+        <article class="project-card" data-category="sql-server">
+          <img src="assets/images/BD-Bisblick.jpg" alt="Sistema de base de datos relacional">
+          <h3>Sistema de Base de Datos Relacional</h3>
+          <p>
+            Diseño e implementación de una base de datos relacional para registrar,
+            consultar y analizar información de becados, con foco en integridad,
+            trazabilidad y consulta eficiente de los datos.
+          </p>
+          <div class="project-tools">
+            <span class="tool-tag">SQL Server</span>
+          </div>
+          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick" class="project-link" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+          </a>
+        </article>
+
+        <article class="project-card" data-category="power-bi power-query">
+          <img src="assets/images/DashboardCovid.png" alt="Dashboard de COVID-19 en CABA">
+          <h3>Dashboard de COVID-19 en CABA</h3>
+          <p>
+            Proyecto de análisis y visualización de datos en Power BI con preparación
+            previa en Power Query, incluyendo indicadores segmentados por edad, género
+            y barrios para facilitar la lectura de tendencias.
+          </p>
+          <div class="project-tools">
+            <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">Power Query</span>
+          </div>
+          <a href="https://github.com/Juanjerezz/covid19-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+          </a>
+        </article>
+
+        <article class="project-card" data-category="python power-bi">
+          <img src="assets/images/DashboardNetflix.png" alt="Análisis de catálogo de Netflix">
+          <h3>Análisis de Catálogo de Netflix</h3>
+          <p>
+            Exploración y análisis de datos con Python y Pandas, complementado con
+            visualización en Power BI para identificar distribuciones, tendencias de
+            estrenos y comportamiento del catálogo por país y clasificación.
+          </p>
+          <div class="project-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">Power BI</span>
+          </div>
+          <a href="https://github.com/Juanjerezz/netflix-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section id="certificates" class="section certificates">
+      <h2>Certificaciones</h2>
+      <p class="section-description">
+        Formación complementaria en análisis de datos, SQL, BI y herramientas tecnológicas.
+      </p>
+
+      <div class="certificates-container">
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/BI-TalentoTech.png" alt="Certificado Business Intelligence" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>Business Intelligence</h3>
+            <p>
+              Formación orientada a análisis de datos, construcción de dashboards
+              y visualización para la toma de decisiones.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Dic 2025</span>
+              <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
             </div>
-            
-            <div class="skills-category">
-              <h4><i class="fas fa-chart-line"></i> Herramientas de Análisis</h4>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fas fa-chart-bar"></i>
-                  <span>Power BI</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-table"></i>
-                  <span>Excel</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-chart-pie"></i>
-                  <span>Looker Studio</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-wrench"></i>
-                  <span>Power Query</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-book"></i>
-                  <span>Jupyter Notebook</span>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/ef-set-english.jpg" alt="EF SET English Certificate" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>EF SET English Certificate</h3>
+            <p>
+              Certificación de inglés nivel C1 Advanced, con competencia avanzada
+              en comprensión y comunicación.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Jul 2025</span>
+              <span class="certificate-issuer">EF Standard English Test</span>
             </div>
-            
-            <div class="skills-category">
-              <h4><i class="fas fa-tools"></i> Librerías & Tools</h4>
-              <div class="skills-grid">
-                <div class="skill-item">
-                  <i class="fas fa-table"></i>
-                  <span>Pandas</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-calculator"></i>
-                  <span>NumPy</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fab fa-git-alt"></i>
-                  <span>Git</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-tasks"></i>
-                  <span>Trello</span>
-                </div>
-                <div class="skill-item">
-                  <i class="fas fa-project-diagram"></i>
-                  <span>Metodologías Ágiles</span>
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/sql-intermedio.jpg" alt="SQL Intermedio" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>SQL Intermedio</h3>
+            <p>
+              Consultas avanzadas, joins, subconsultas y buenas prácticas para
+              el trabajo con bases de datos relacionales.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Jun 2025</span>
+              <span class="certificate-issuer">Sololearn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/frontend-js.jpg" alt="Front-End JS" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>Front-End JS</h3>
+            <p>
+              Curso de desarrollo front-end con JavaScript, enfocado en fundamentos
+              de maquetado, interacción y lógica de interfaz.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Abr 2025</span>
+              <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/data-analytics-puerta18.jpg" alt="Data Analytics" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>Data Analytics</h3>
+            <p>
+              Formación orientada a herramientas y fundamentos clave para análisis
+              de datos e inserción laboral en el área.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Abr 2025</span>
+              <span class="certificate-issuer">Fundación Puerta 18</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/fundamentos-analisis-datos.jpg" alt="Fundamentos profesionales del análisis de datos" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>Fundamentos Profesionales del Análisis de Datos</h3>
+            <p>
+              Curso enfocado en análisis, visualización y fundamentos del trabajo
+              con datos dentro del ecosistema Microsoft.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Feb 2025</span>
+              <span class="certificate-issuer">Microsoft & LinkedIn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image-container">
+            <img src="assets/images/sql-essential.jpg" alt="SQL Essential Training" class="certificate-image">
+          </div>
+          <div class="certificate-content">
+            <h3>SQL Essential Training</h3>
+            <p>
+              Fundamentos de consultas SQL, manipulación de datos y bases de datos
+              relacionales.
+            </p>
+            <div class="certificate-meta">
+              <span class="certificate-date">Feb 2025</span>
+              <span class="certificate-issuer">LinkedIn Learning</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-<section id="projects" class="section projects">
-  <h2>Portfolio</h2>
-  <p>
-    Una colección de proyectos que demuestran mis habilidades técnicas, mi capacidad para resolver problemas y mi pasión por los datos. Cada proyecto refleja mi dedicación a aplicar mis conocimientos a desafíos reales y crear soluciones impactantes.
-  </p>
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
 
-  <!-- Botones de categorías -->
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">ALL</button>
-    <button class="filter-btn" data-filter="python">PYTHON</button>
-    <button class="filter-btn" data-filter="Sql-Server">SQL SERVER</button>
-    <button class="filter-btn" data-filter="Power-BI">POWER BI</button>
-    <button class="filter-btn" data-filter="Power-Query">POWER QUERY</button>
-    <button class="filter-btn" data-filter="Looker-Studio">LOOKER STUDIO</button>
-  </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3><i class="fas fa-info-circle"></i> Información de contacto</h3>
 
-  <!-- Grid de proyectos -->
-  <div class="project-grid">
-    <article class="project-card" data-category="Looker-Studio">
-      <img src="assets/images/DataWiseConsulting.png" alt="Looker-Studio">
-      <h3>Dashboard Análisis de Ventas 2024</h3>
-      <p>Dashboard desarrollado en Looker Studio para analizar el desempeño de ventas 2024, con KPIs, visualizaciones interactivas y filtros dinámicos que facilitan la toma de decisiones.</p>
-      <div class="project-tools">
-        <span class="tool-tag">Looker Studio</span>
-      </div>
-      <a href="https://github.com/Juanjerezz/proyecto-final-business-intelligence" class="project-link" target="_blank" 
-   rel="noopener noreferrer" >Ver Proyecto</a>
-    </article>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <i class="fas fa-envelope"></i>
+              <div class="contact-detail-content">
+                <h4>Email</h4>
+                <p><a href="mailto:juaanjosejerez@gmail.com">juaanjosejerez@gmail.com</a></p>
+              </div>
+            </div>
 
-    <article class="project-card" data-category="Power-BI Sql-Server">
-      <img src="assets/images/DashboardBisblick.png" alt="Power-BI">
-      <h3>Dashboard Power Bi</h3>
-      <p>El tablero fue desarrollado utilizando Power BI, conectado directamente a los datos de la base de datos SQL del sistema de gestión de becados.</p>
-      <div class="project-tools">
-        <span class="tool-tag">Power BI</span>
-        <span class="tool-tag">Sql server</span>
-      </div>
-      <a href="https://github.com/Juanjerezz/tp-integrador-bisblick/tree/master/dashboard" class="project-link" target="_blank" 
-   rel="noopener noreferrer" >Ver Proyecto</a>
-    </article>
+            <div class="contact-detail">
+              <i class="fas fa-phone"></i>
+              <div class="contact-detail-content">
+                <h4>Teléfono</h4>
+                <p><a href="tel:+541166388958">+54 11 6638-8958</a></p>
+              </div>
+            </div>
 
-    <article class="project-card" data-category="Sql-Server">
-      <img src="assets/images/BD-Bisblick.jpg" alt="MySQL Project">
-      <h3>Sistema de Base de Datos Relacional</h3>
-      <p>Diseño e implementación de una base de datos relacional que permite registrar, consultar, actualizar y analizar la información de los becados, facilitando el seguimiento académico, laboral y social de cada uno.</p>
-      <div class="project-tools">
-        <span class="tool-tag">Sql server</span>
-      </div>
-      <a href="https://github.com/Juanjerezz/tp-integrador-bisblick" class="project-link" target="_blank" 
-   rel="noopener noreferrer" >Ver Proyecto</a>
-    </article>
+            <div class="contact-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="contact-detail-content">
+                <h4>Ubicación</h4>
+                <p>Buenos Aires, Argentina</p>
+              </div>
+            </div>
+          </div>
 
-    <article class="project-card" data-category="Power-BI Power-Query">
-      <img src="assets/images/DashboardCovid.png" alt="Tableau Dashboard">
-      <h3>Dashboard de COVID-19 en CABA</h3>
-      <p>Dashboard en Power BI sobre casos de COVID-19 en CABA 2024, con datos preparados en Power Query e indicadores clave por edad, género y barrios.</p>
-      <div class="project-tools">
-        <span class="tool-tag">Power BI</span>
-        <span class="tool-tag">Power Query</span>
-      </div>
-      <a href="https://github.com/Juanjerezz/covid19-analisis-datos" class="project-link" target="_blank" 
-   rel="noopener noreferrer">Ver Proyecto</a>
-    </article>
-
-    <article class="project-card" data-category="python Power-BI">
-      <img src="assets/images/DashboardNetflix.png" alt="netflix Project">
-      <h3>Dashboard de Netflix</h3>
-      <p>Análisis del catálogo de Netflix con Pandas y visualización en Power BI para explorar clasificaciones, países y tendencias de estrenos.</p>
-      <div class="project-tools">
-        <span class="tool-tag">Python</span>
-        <span class="tool-tag">Power BI</span>
-      </div>
-      <a href="https://github.com/Juanjerezz/netflix-analisis-datos" class="project-link" target="_blank" 
-   rel="noopener noreferrer" >Ver Proyecto</a>
-    </article>
-  </div>
-</section>
-
-<!-- Certificates -->
-<section id="certificates" class="section certificates">
-  <h2>Certificados</h2>
-  <div class="certificates-container">
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/BI-TalentoTech.png" alt="BI-talentoTech" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>Business Intelligence</h3>
-        <p>Certificado por el Ministerio de Educación de la Ciudad de Buenos Aires – 80 horas.
-Análisis de datos, construcción de dashboards y visualización para la toma de decisiones utilizando herramientas de Business Intelligence.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Dic 2025</span>
-          <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/ef-set-english.jpg" alt="EF SET English Certificate" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>EF SET English Certificate</h3>
-        <p>Certificado de inglés nivel C1 Advanced (64/100). Competencia avanzada en reading, listening, writing y speaking según el Marco Común Europeo.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Jul 2025</span>
-          <span class="certificate-issuer">EF Standard English Test</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/sql-intermedio.jpg" alt="SQL Intermedio" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>SQL Intermedio</h3>
-        <p>Certificado por Sololearn - Nivel intermedio de SQL. Consultas avanzadas, joins complejos, subconsultas y optimización de bases de datos.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Jun 2025</span>
-          <span class="certificate-issuer">Sololearn</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/frontend-js.jpg" alt="Front-End JS" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>Front-End JS</h3>
-        <p>Certificado por el Ministerio de Educación - 80 horas. Curso de desarrollo front-end con JavaScript en Talento Tech, Agencia de Habilidades para el Futuro.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Abr 2025</span>
-          <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/data-analytics-puerta18.jpg" alt="Data Analytics" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>Data Analytics</h3>
-        <p>Certificado por Fundación Puerta 18. Curso completo de análisis de datos para inserción laboral, cubriendo herramientas y técnicas fundamentales.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Abr 2025</span>
-          <span class="certificate-issuer">Fundación Puerta 18</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/fundamentos-analisis-datos.jpg" alt="Fundamentos profesionales del análisis de datos" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>Fundamentos Profesionales del Análisis de Datos</h3>
-        <p>Certificado por Microsoft y LinkedIn - 11h 28min. Cubre análisis de datos, visualización y analítica con herramientas profesionales del ecosistema Microsoft.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Feb 2025</span>
-          <span class="certificate-issuer">Microsoft & LinkedIn</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificate-card">
-      <div class="certificate-image-container">
-        <img src="assets/images/sql-essential.jpg" alt="SQL Essential Training" class="certificate-image">
-      </div>
-      <div class="certificate-content">
-        <h3>SQL Essential Training</h3>
-        <p>Curso completo de SQL en LinkedIn Learning - 4h 34min. Fundamentos de consultas SQL, manipulación de datos y gestión de bases de datos relacionales.</p>
-        <div class="certificate-meta">
-          <span class="certificate-date">Feb 2025</span>
-          <span class="certificate-issuer">LinkedIn Learning</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Contact -->
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-container">
-    <div class="contact-info">
-      <h3><i class="fas fa-info-circle"></i> Información de Contacto</h3>
-      <div class="contact-details">
-        <div class="contact-detail">
-          <i class="fas fa-envelope"></i>
-          <div class="contact-detail-content">
-            <h4>Email</h4>
-            <p><a href="mailto:tu.email@ejemplo.com">Juaanjosejerez@gmail.com</a></p>
+          <h3 style="margin-top: 2rem;"><i class="fas fa-share-alt"></i> Redes</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Juanjerezz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
-        <div class="contact-detail">
-          <i class="fas fa-phone"></i>
-          <div class="contact-detail-content">
-            <h4>Teléfono</h4>
-            <p><a href="tel:+1234567890">+54 1166388958</a></p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="contact-detail-content">
-            <h4>Ubicación</h4>
-            <p>Buenos Aires, Argentina</p>
-          </div>
+
+        <div class="contact-form-container">
+          <h3><i class="fas fa-paper-plane"></i> Enviame un mensaje</h3>
+          <form class="contact-form" action="https://formspree.io/f/mdklbzwr" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required>
+              <label for="name">Tu nombre</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">Tu email</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder=" " required></textarea>
+              <label for="message">Tu mensaje</label>
+            </div>
+
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i>
+              Enviar mensaje
+            </button>
+          </form>
         </div>
       </div>
-      <h3 style="margin-top: 2rem;"><i class="fas fa-share-alt"></i> Sígueme</h3>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" 
-   rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/Juanjerezz" target="_blank" 
-   rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-    
-    <div class="contact-form-container">
-  <h3><i class="fas fa-paper-plane"></i> Envíame un Mensaje</h3>
-  <form class="contact-form" action="https://formspree.io/f/mdklbzwr" method="POST">
-    <div class="form-group">
-      <input type="text" id="name" name="name" placeholder=" " required>
-      <label for="name">Tu nombre</label>
-    </div>
-    <div class="form-group">
-      <input type="email" id="email" name="email" placeholder=" " required>
-      <label for="email">Tu email</label>
-    </div>
-    <div class="form-group">
-      <textarea id="message" name="message" placeholder=" " required></textarea>
-      <label for="message">Tu mensaje</label>
-    </div>
-    <button type="submit">
-      <i class="fas fa-paper-plane"></i> Enviar Mensaje
-    </button>
-  </form>
-</div>
-  </div>
-</section>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Juan Jerez - Todos los derechos reservados</p>
+    <p>© 2026 Juan Jerez - Todos los derechos reservados</p>
   </footer>
 
   <script src="assets/script.js"></script>
