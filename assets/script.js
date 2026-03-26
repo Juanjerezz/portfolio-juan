@@ -83,3 +83,23 @@ window.addEventListener("scroll", () => {
   }
 });
 });
+
+// ===== Dark Mode =====
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = themeToggle?.querySelector("i");
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+  themeIcon?.classList.replace("fa-moon", "fa-sun");
+}
+
+themeToggle?.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  themeIcon?.classList.replace(
+    isDark ? "fa-moon" : "fa-sun",
+    isDark ? "fa-sun" : "fa-moon"
+  );
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
