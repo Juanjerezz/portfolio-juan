@@ -25,16 +25,21 @@
       </button>
 
       <ul class="nav-links">
-        <li><a href="#home" class="active">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#certificates">Certificaciones</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#home" class="active" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="#about" data-es="Sobre mí" data-en="About me">Sobre mí</a></li>
+        <li><a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+        <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="#certificates" data-es="Certificaciones" data-en="Certifications">Certificaciones</a></li>
+        <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
       </ul>
-      <button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+      <div class="nav-controls">
+  <button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
     <i class="fas fa-moon"></i>
   </button>
+  <button class="lang-toggle" id="langToggle" aria-label="Switch language" title="Switch language">
+    <span class="lang-label">EN</span>
+  </button>
+</div>
     </nav>
   </header>
 
@@ -50,24 +55,24 @@
 
   <div class="hero-content">
     <div class="hero-text">
-      <p class="hero-kicker">PORTFOLIO PROFESIONAL</p>
+      <p class="hero-kicker" data-es="PORTFOLIO PROFESIONAL" data-en="PROFESSIONAL PORTFOLIO">PORTFOLIO PROFESIONAL</p>
 
       <h1>
-        Hola,<br>
-        soy <span>Juan Jerez</span>
+        <span data-es="Hola," data-en="Hi,">Hola,</span><br>
+        <span data-es="soy" data-en="I'm">soy</span> <span>Juan Jerez</span>
       </h1>
 
-      <p class="hero-description">
+      <p class="hero-description" data-es="Estudiante de Ingeniería en Informática con experiencia en el trabajo con datos, enfocado en el análisis, la transformación y el procesamiento de información. Interesado en seguir desarrollándome en áreas como <strong>Data Engineering</strong> y <strong>Machine Learning</strong>." data-en="Computer Engineering student with experience working with data, focused on analysis, transformation and information processing. Interested in growing in areas like <strong>Data Engineering</strong> and <strong>Machine Learning</strong>.">
   Estudiante de Ingeniería en Informática con experiencia en el trabajo con datos,
   enfocado en el análisis, la transformación y el procesamiento de información.
   Interesado en seguir desarrollándome en áreas como <strong>Data Engineering</strong> y <strong>Machine Learning</strong>.
 </p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn">Ver proyectos</a>
+        <a href="#projects" class="btn" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
         <a href="assets/Juan Jerez - CV.pdf" class="btn btn-cv" download="Juan Jerez - CV .pdf">
           <i class="fas fa-download"></i>
-          Descargar CV
+          <span data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
         </a>
       </div>
 
@@ -91,7 +96,7 @@
 
     <!-- Sobre mí -->
     <section id="about" class="section about">
-      <h2>Sobre mí</h2>
+      <h2 data-es="Sobre mí" data-en="About me">Sobre mí</h2>
 
       <div class="about-content">
         <div class="about-text">
@@ -103,20 +108,20 @@
         <span class="about-meta"><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</span>
         <span class="about-meta"><i class="fas fa-graduation-cap"></i> UADE · 4.º año</span>
       </div>
-      <span class="about-status"><i class="fas fa-circle"></i> Buscando seguir creciendo y aportando en el area de datos</span>
+      <span class="about-status"><i class="fas fa-circle"></i> <span data-es="Buscando seguir creciendo y aportando en el area de datos" data-en="Looking to keep growing and contributing in the data field">Buscando seguir creciendo y aportando en el area de datos</span></span>
     </div>
   </div>
 
-  <blockquote class="about-quote">
+  <blockquote class="about-quote" data-es='"Me gusta cuando los datos dejan de ser números y empiezan a contar una historia."' data-en='"I love when data stops being numbers and starts telling a story."'>
     "Me gusta cuando los datos dejan de ser números y empiezan a contar una historia."
   </blockquote>
 
-  <p>
+  <p data-es="Soy estudiante de Ingeniería en Informática en UADE, con foco en análisis de datos y BI. Me motiva transformar información en algo útil y claro para quien toma decisiones." data-en="I'm a Computer Engineering student at UADE, focused on data analysis and BI. I'm motivated by turning information into something useful and clear for decision-makers.">
     Soy estudiante de Ingeniería en Informática en UADE, con foco en análisis de datos y BI.
     Me motiva transformar información en algo útil y claro para quien toma decisiones.
   </p>
 
-  <p>
+  <p data-es='Trabajo con SQL, Python y Power Bi en proyectos reales, Busco crecer en el ecosistema de datos, explorando roles de <strong>Data Analytics</strong>, <strong>Data Engineering</strong> y <strong>Machine Learning</strong>.' data-en='I work with SQL, Python and Power BI in real projects. I aim to grow within the data ecosystem, exploring roles in <strong>Data Analytics</strong>, <strong>Data Engineering</strong> and <strong>Machine Learning</strong>.'>
     Trabajo con SQL, Python y Power Bi en proyectos reales, Busco crecer en el ecosistema de datos, explorando roles de
 <strong>Data Analytics</strong>, <strong>Data Engineering</strong> y
 <strong>Machine Learning</strong>.
@@ -134,15 +139,15 @@
 
   <a href="#experience" class="btn">
     <i class="fas fa-arrow-right"></i>
-    Ver experiencia
+    <span data-es="Ver experiencia" data-en="View experience">Ver experiencia</span>
   </a>
 </div>
 
         <div class="about-summary-card">
-  <h3 class="about-skills-title">Tecnologías y herramientas</h3>
+  <h3 class="about-skills-title" data-es="Tecnologías y herramientas" data-en="Technologies & Tools">Tecnologías y herramientas</h3>
 
   <div class="about-skills-group">
-    <h4><i class="fas fa-database"></i> Datos y bases de datos</h4>
+    <h4><i class="fas fa-database"></i> <span data-es="Datos y bases de datos" data-en="Data & Databases">Datos y bases de datos</span></h4>
     <div class="about-skills-grid">
       <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
       <div class="skill-item"><i class="fas fa-server"></i><span>SQL Server</span></div>
@@ -152,7 +157,7 @@
   </div>
 
   <div class="about-skills-group">
-    <h4><i class="fas fa-chart-column"></i> BI y visualización</h4>
+    <h4><i class="fas fa-chart-column"></i> <span data-es="BI y visualización" data-en="BI & Visualization">BI y visualización</span></h4>
     <div class="about-skills-grid">
       <div class="skill-item"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
       <div class="skill-item"><i class="fas fa-chart-pie"></i><span>Looker Studio</span></div>
@@ -162,14 +167,14 @@
   </div>
 
   <div class="about-skills-group">
-    <h4><i class="fas fa-code"></i> Programación y herramientas</h4>
+    <h4><i class="fas fa-code"></i> <span data-es="Programación y herramientas" data-en="Programming & Tools">Programación y herramientas</span></h4>
     <div class="about-skills-grid">
       <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
       <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
       <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
       <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
       <div class="skill-item"><i class="fas fa-gears"></i><span>ETL</span></div>
-      <div class="skill-item"><i class="fas fa-database"></i><span>Modelado de Datos</span></div>
+      <div class="skill-item"><i class="fas fa-database"></i><span data-es="Modelado de Datos" data-en="Data Modeling">Modelado de Datos</span></div>
       <div class="skill-item"><i class="fas fa-book"></i><span>Jupyter</span></div>
       <div class="skill-item"><i class="fas fa-project-diagram"></i><span>Agile</span></div>
     </div>
@@ -180,8 +185,8 @@
 
     <!-- Experiencia -->
     <section id="experience" class="section experience">
-  <h2>Experiencia</h2>
-  <p class="section-description">
+  <h2 data-es="Experiencia" data-en="Experience">Experiencia</h2>
+  <p class="section-description" data-es="Experiencia orientada a análisis, visualización de datos y soporte a reportes de negocio." data-en="Experience focused on data analysis, visualization and business reporting support.">
     Experiencia orientada a análisis, visualización de datos y soporte a reportes de negocio.
   </p>
 
@@ -197,25 +202,25 @@
             <div class="experience-logo">
             <img src="assets/images/GrupoHarmony.png" alt="Grupo Harmony"></div>
             <div>
-              <h3>Pasantía en Análisis de Datos</h3>
+              <h3 data-es="Pasantía en Análisis de Datos" data-en="Data Analysis Internship">Pasantía en Análisis de Datos</h3>
               <h4>Grupo Harmony S.A.</h4>
             </div>
           </div>
           <span class="experience-date">Sep 2025 – Mar 2026</span>
         </div>
 
-        <p>
+        <p data-es="Participación en tareas de análisis de datos, construcción de reportes e indicadores, consultas sobre SQL Server y mantenimiento de dashboards publicados para distintas áreas." data-en="Involvement in data analysis tasks, building reports and KPIs, SQL Server queries, and maintaining published dashboards for various business areas.">
           Participación en tareas de análisis de datos, construcción de reportes e indicadores,
           consultas sobre SQL Server y mantenimiento de dashboards publicados para distintas áreas.
         </p>
 
         <ul class="experience-list">
-  <li>Recopilación, limpieza y organización de datos de distintas fuentes mediante consultas en SQL Server.</li>
-  <li>Desarrollo y mantenimiento de reportes e indicadores (KPIs) en Power BI.</li>
-  <li>Transformación y preparación de datos con Power Query y Excel.</li>
-  <li>Monitoreo y mantenimiento de dashboards en Power BI Service.</li>
-  <li>Gestión de backups y restore de bases de datos en SQL Server.</li>
-  <li>Apoyo en análisis de datos y generación de insights para la toma de decisiones.</li>
+  <li data-es="Recopilación, limpieza y organización de datos de distintas fuentes mediante consultas en SQL Server." data-en="Collection, cleaning and organization of data from multiple sources using SQL Server queries.">Recopilación, limpieza y organización de datos de distintas fuentes mediante consultas en SQL Server.</li>
+  <li data-es="Desarrollo y mantenimiento de reportes e indicadores (KPIs) en Power BI." data-en="Development and maintenance of reports and KPIs in Power BI.">Desarrollo y mantenimiento de reportes e indicadores (KPIs) en Power BI.</li>
+  <li data-es="Transformación y preparación de datos con Power Query y Excel." data-en="Data transformation and preparation with Power Query and Excel.">Transformación y preparación de datos con Power Query y Excel.</li>
+  <li data-es="Monitoreo y mantenimiento de dashboards en Power BI Service." data-en="Monitoring and maintenance of dashboards in Power BI Service.">Monitoreo y mantenimiento de dashboards en Power BI Service.</li>
+  <li data-es="Gestión de backups y restore de bases de datos en SQL Server." data-en="Database backup and restore management in SQL Server.">Gestión de backups y restore de bases de datos en SQL Server.</li>
+  <li data-es="Apoyo en análisis de datos y generación de insights para la toma de decisiones." data-en="Support in data analysis and insight generation for decision-making.">Apoyo en análisis de datos y generación de insights para la toma de decisiones.</li>
 </ul>
 
         <div class="project-tools">
@@ -232,13 +237,13 @@
 
     <!-- Proyectos -->
     <section id="projects" class="section projects">
-      <h2>Proyectos</h2>
-      <p class="section-description">
+      <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
+      <p class="section-description" data-es="Proyectos académicos y personales enfocados en análisis de datos, bases de datos y visualización." data-en="Academic and personal projects focused on data analysis, databases and visualization.">
         Proyectos académicos y personales enfocados en análisis de datos, bases de datos y visualización.
       </p>
 
       <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn active" data-filter="all" data-es="Todos" data-en="All">Todos</button>
         <button class="filter-btn" data-filter="python">Python</button>
         <button class="filter-btn" data-filter="sql-server">SQL Server</button>
         <button class="filter-btn" data-filter="power-bi">Power BI</button>
@@ -249,8 +254,8 @@
       <div class="project-grid">
         <article class="project-card" data-category="looker-studio">
           <img src="assets/images/DataWiseConsulting.png" alt="Dashboard de análisis de ventas 2024">
-          <h3>Dashboard de Análisis de Ventas 2024</h3>
-          <p>
+          <h3 data-es="Dashboard de Análisis de Ventas 2024" data-en="Sales Analysis Dashboard 2024">Dashboard de Análisis de Ventas 2024</h3>
+          <p data-es="Dashboard desarrollado en Looker Studio para analizar el desempeño comercial, con KPIs, filtros y visualizaciones orientadas al seguimiento de ventas y apoyo a la toma de decisiones." data-en="Dashboard built in Looker Studio to analyze commercial performance, featuring KPIs, filters and visualizations for sales tracking and decision support.">
             Dashboard desarrollado en Looker Studio para analizar el desempeño comercial,
             con KPIs, filtros y visualizaciones orientadas al seguimiento de ventas y apoyo
             a la toma de decisiones.
@@ -258,15 +263,15 @@
           <div class="project-tools">
             <span class="tool-tag">Looker Studio</span>
           </div>
-          <a href="https://github.com/Juanjerezz/proyecto-final-business-intelligence" class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Juanjerezz/proyecto-final-business-intelligence" class="project-link" target="_blank" rel="noopener noreferrer" data-es="Ver proyecto" data-en="View project">
             Ver proyecto
           </a>
         </article>
 
         <article class="project-card" data-category="power-bi sql-server">
           <img src="assets/images/DashboardBisblick.png" alt="Dashboard en Power BI conectado a SQL Server">
-          <h3>Dashboard de Gestión de Becados</h3>
-          <p>
+          <h3 data-es="Dashboard de Gestión de Becados" data-en="Scholarship Management Dashboard">Dashboard de Gestión de Becados</h3>
+          <p data-es="Tablero desarrollado en Power BI conectado a una base de datos SQL Server, diseñado para visualizar indicadores y facilitar el seguimiento de información académica, social y laboral." data-en="Power BI dashboard connected to a SQL Server database, designed to visualize indicators and track academic, social and employment data.">
             Tablero desarrollado en Power BI conectado a una base de datos SQL Server,
             diseñado para visualizar indicadores y facilitar el seguimiento de información
             académica, social y laboral.
@@ -275,15 +280,15 @@
             <span class="tool-tag">Power BI</span>
             <span class="tool-tag">SQL Server</span>
           </div>
-          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick/tree/master/dashboard" class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick/tree/master/dashboard" class="project-link" target="_blank" rel="noopener noreferrer" data-es="Ver proyecto" data-en="View project">
             Ver proyecto
           </a>
         </article>
 
         <article class="project-card" data-category="sql-server">
           <img src="assets/images/BD-Bisblick.jpg" alt="Sistema de base de datos relacional">
-          <h3>Sistema de Base de Datos Relacional</h3>
-          <p>
+          <h3 data-es="Sistema de Base de Datos Relacional" data-en="Relational Database System">Sistema de Base de Datos Relacional</h3>
+          <p data-es="Diseño e implementación de una base de datos relacional para registrar, consultar y analizar información de becados, con foco en integridad, trazabilidad y consulta eficiente de los datos." data-en="Design and implementation of a relational database to record, query and analyze scholarship data, focused on integrity, traceability and efficient querying.">
             Diseño e implementación de una base de datos relacional para registrar,
             consultar y analizar información de becados, con foco en integridad,
             trazabilidad y consulta eficiente de los datos.
@@ -291,15 +296,15 @@
           <div class="project-tools">
             <span class="tool-tag">SQL Server</span>
           </div>
-          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick" class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Juanjerezz/tp-integrador-bisblick" class="project-link" target="_blank" rel="noopener noreferrer" data-es="Ver proyecto" data-en="View project">
             Ver proyecto
           </a>
         </article>
 
         <article class="project-card" data-category="power-bi power-query">
           <img src="assets/images/DashboardCovid.png" alt="Dashboard de COVID-19 en CABA">
-          <h3>Dashboard de COVID-19 en CABA</h3>
-          <p>
+          <h3 data-es="Dashboard de COVID-19 en CABA" data-en="COVID-19 Dashboard in CABA">Dashboard de COVID-19 en CABA</h3>
+          <p data-es="Proyecto de análisis y visualización de datos en Power BI con preparación previa en Power Query, incluyendo indicadores segmentados por edad, género y barrios para facilitar la lectura de tendencias." data-en="Data analysis and visualization project in Power BI with prior preparation in Power Query, including indicators segmented by age, gender and neighborhoods to identify trends.">
             Proyecto de análisis y visualización de datos en Power BI con preparación
             previa en Power Query, incluyendo indicadores segmentados por edad, género
             y barrios para facilitar la lectura de tendencias.
@@ -308,15 +313,15 @@
             <span class="tool-tag">Power BI</span>
             <span class="tool-tag">Power Query</span>
           </div>
-          <a href="https://github.com/Juanjerezz/covid19-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Juanjerezz/covid19-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer" data-es="Ver proyecto" data-en="View project">
             Ver proyecto
           </a>
         </article>
 
         <article class="project-card" data-category="python power-bi">
           <img src="assets/images/DashboardNetflix.png" alt="Análisis de catálogo de Netflix">
-          <h3>Análisis de Catálogo de Netflix</h3>
-          <p>
+          <h3 data-es="Análisis de Catálogo de Netflix" data-en="Netflix Catalog Analysis">Análisis de Catálogo de Netflix</h3>
+          <p data-es="Exploración y análisis de datos con Python y Pandas, complementado con visualización en Power BI para identificar distribuciones, tendencias de estrenos y comportamiento del catálogo por país y clasificación." data-en="Data exploration and analysis with Python and Pandas, complemented with Power BI visualization to identify distributions, release trends and catalog behavior by country and rating.">
             Exploración y análisis de datos con Python y Pandas, complementado con
             visualización en Power BI para identificar distribuciones, tendencias de
             estrenos y comportamiento del catálogo por país y clasificación.
@@ -325,7 +330,7 @@
             <span class="tool-tag">Python</span>
             <span class="tool-tag">Power BI</span>
           </div>
-          <a href="https://github.com/Juanjerezz/netflix-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Juanjerezz/netflix-analisis-datos" class="project-link" target="_blank" rel="noopener noreferrer" data-es="Ver proyecto" data-en="View project">
             Ver proyecto
           </a>
         </article>
@@ -334,8 +339,8 @@
 
     <!-- Certificaciones -->
     <section id="certificates" class="section certificates">
-      <h2>Certificaciones</h2>
-      <p class="section-description">
+      <h2 data-es="Certificaciones" data-en="Certifications">Certificaciones</h2>
+      <p class="section-description" data-es="Formación complementaria en análisis de datos, SQL, BI y herramientas tecnológicas." data-en="Complementary training in data analysis, SQL, BI and technology tools.">
         Formación complementaria en análisis de datos, SQL, BI y herramientas tecnológicas.
       </p>
 
@@ -345,12 +350,12 @@
             <img src="assets/images/certificate Associate Data Engineer SQL.png" alt="Certificado Ingeniero de Datos Datacamp" class="certificate-image">
           </div>
           <div class="certificate-content">
-            <h3>Ingeniero de Datos Asociado en SQL</h3>
-            <p>
+            <h3 data-es="Ingeniero de Datos Asociado en SQL" data-en="Associate Data Engineer in SQL">Ingeniero de Datos Asociado en SQL</h3>
+            <p data-es="Programa de carrera de Ingeniería de Datos con SQL, enfocado en el diseño, transformación y gestión eficiente de datos. Incluye SQL avanzado, PostgreSQL y Snowflake, modelado de datos relacional, optimización de consultas y construcción de procesos ETL para entornos analíticos." data-en="Data Engineering career track with SQL, focused on efficient data design, transformation and management. Covers advanced SQL, PostgreSQL and Snowflake, relational data modeling, query optimization and ETL pipeline building for analytical environments.">
               Programa de carrera de Ingeniería de Datos con SQL, enfocado en el diseño, transformación y gestión eficiente de datos. Incluye SQL avanzado, PostgreSQL y Snowflake, modelado de datos relacional, optimización de consultas y construcción de procesos ETL para entornos analíticos. 
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Ene 2026</span>
+              <span class="certificate-date" data-es="Ene 2026" data-en="Jan 2026">Ene 2026</span>
               <span class="certificate-issuer">Datacamp</span>
             </div>
           </div>
@@ -361,12 +366,12 @@
           </div>
           <div class="certificate-content">
             <h3>Business Intelligence</h3>
-            <p>
+            <p data-es="Formación orientada a análisis de datos, construcción de dashboards y visualización para la toma de decisiones." data-en="Training focused on data analysis, dashboard building and visualization for decision-making.">
               Formación orientada a análisis de datos, construcción de dashboards
               y visualización para la toma de decisiones.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Dic 2025</span>
+              <span class="certificate-date" data-es="Dic 2025" data-en="Dec 2025">Dic 2025</span>
               <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
             </div>
           </div>
@@ -378,12 +383,12 @@
           </div>
           <div class="certificate-content">
             <h3>EF SET English Certificate</h3>
-            <p>
+            <p data-es="Certificación de inglés nivel C1 Advanced, con competencia avanzada en comprensión y comunicación." data-en="C1 Advanced English certification, with advanced proficiency in comprehension and communication.">
               Certificación de inglés nivel C1 Advanced, con competencia avanzada
               en comprensión y comunicación.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Jul 2025</span>
+              <span class="certificate-date" data-es="Jul 2025" data-en="Jul 2025">Jul 2025</span>
               <span class="certificate-issuer">EF Standard English Test</span>
             </div>
           </div>
@@ -394,13 +399,13 @@
             <img src="assets/images/sql-intermedio.jpg" alt="SQL Intermedio" class="certificate-image">
           </div>
           <div class="certificate-content">
-            <h3>SQL Intermedio</h3>
-            <p>
+            <h3 data-es="SQL Intermedio" data-en="Intermediate SQL">SQL Intermedio</h3>
+            <p data-es="Consultas avanzadas, joins, subconsultas y buenas prácticas para el trabajo con bases de datos relacionales." data-en="Advanced queries, joins, subqueries and best practices for working with relational databases.">
               Consultas avanzadas, joins, subconsultas y buenas prácticas para
               el trabajo con bases de datos relacionales.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Jun 2025</span>
+              <span class="certificate-date" data-es="Jun 2025" data-en="Jun 2025">Jun 2025</span>
               <span class="certificate-issuer">Sololearn</span>
             </div>
           </div>
@@ -412,12 +417,12 @@
           </div>
           <div class="certificate-content">
             <h3>Front-End JS</h3>
-            <p>
+            <p data-es="Curso de desarrollo front-end con JavaScript, enfocado en fundamentos de maquetado, interacción y lógica de interfaz." data-en="Front-end development course with JavaScript, focused on layout fundamentals, interaction and interface logic.">
               Curso de desarrollo front-end con JavaScript, enfocado en fundamentos
               de maquetado, interacción y lógica de interfaz.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Abr 2025</span>
+              <span class="certificate-date" data-es="Abr 2025" data-en="Apr 2025">Abr 2025</span>
               <span class="certificate-issuer">Agencia de Habilidades para el Futuro</span>
             </div>
           </div>
@@ -429,12 +434,12 @@
           </div>
           <div class="certificate-content">
             <h3>Data Analytics</h3>
-            <p>
+            <p data-es="Formación orientada a herramientas y fundamentos clave para análisis de datos e inserción laboral en el área." data-en="Training focused on key tools and fundamentals for data analysis and entering the job market in the field.">
               Formación orientada a herramientas y fundamentos clave para análisis
               de datos e inserción laboral en el área.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Abr 2025</span>
+              <span class="certificate-date" data-es="Abr 2025" data-en="Apr 2025">Abr 2025</span>
               <span class="certificate-issuer">Fundación Puerta 18</span>
             </div>
           </div>
@@ -445,13 +450,13 @@
             <img src="assets/images/fundamentos-analisis-datos.jpg" alt="Fundamentos profesionales del análisis de datos" class="certificate-image">
           </div>
           <div class="certificate-content">
-            <h3>Fundamentos Profesionales del Análisis de Datos</h3>
-            <p>
+            <h3 data-es="Fundamentos Profesionales del Análisis de Datos" data-en="Professional Foundations of Data Analysis">Fundamentos Profesionales del Análisis de Datos</h3>
+            <p data-es="Curso enfocado en análisis, visualización y fundamentos del trabajo con datos dentro del ecosistema Microsoft." data-en="Course focused on analysis, visualization and data work fundamentals within the Microsoft ecosystem.">
               Curso enfocado en análisis, visualización y fundamentos del trabajo
               con datos dentro del ecosistema Microsoft.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Feb 2025</span>
+              <span class="certificate-date" data-es="Feb 2025" data-en="Feb 2025">Feb 2025</span>
               <span class="certificate-issuer">Microsoft & LinkedIn</span>
             </div>
           </div>
@@ -463,12 +468,12 @@
           </div>
           <div class="certificate-content">
             <h3>SQL Essential Training</h3>
-            <p>
+            <p data-es="Fundamentos de consultas SQL, manipulación de datos y bases de datos relacionales." data-en="Fundamentals of SQL queries, data manipulation and relational databases.">
               Fundamentos de consultas SQL, manipulación de datos y bases de datos
               relacionales.
             </p>
             <div class="certificate-meta">
-              <span class="certificate-date">Feb 2025</span>
+              <span class="certificate-date" data-es="Feb 2025" data-en="Feb 2025">Feb 2025</span>
               <span class="certificate-issuer">LinkedIn Learning</span>
             </div>
           </div>
@@ -478,11 +483,11 @@
 
     <!-- Contacto -->
     <section id="contact" class="contact">
-      <h2>Contacto</h2>
+      <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
 
       <div class="contact-container">
         <div class="contact-info">
-          <h3><i class="fas fa-info-circle"></i> Información de contacto</h3>
+          <h3><i class="fas fa-info-circle"></i> <span data-es="Información de contacto" data-en="Contact Information">Información de contacto</span></h3>
 
           <div class="contact-details">
             <div class="contact-detail">
@@ -496,7 +501,7 @@
             <div class="contact-detail">
               <i class="fas fa-phone"></i>
               <div class="contact-detail-content">
-                <h4>Teléfono</h4>
+                <h4 data-es="Teléfono" data-en="Phone">Teléfono</h4>
                 <p><a href="tel:+541166388958">+54 11 6638-8958</a></p>
               </div>
             </div>
@@ -504,13 +509,13 @@
             <div class="contact-detail">
               <i class="fas fa-map-marker-alt"></i>
               <div class="contact-detail-content">
-                <h4>Ubicación</h4>
+                <h4 data-es="Ubicación" data-en="Location">Ubicación</h4>
                 <p>Buenos Aires, Argentina</p>
               </div>
             </div>
           </div>
 
-          <h3 style="margin-top: 2rem;"><i class="fas fa-share-alt"></i> Redes</h3>
+          <h3 style="margin-top: 2rem;"><i class="fas fa-share-alt"></i> <span data-es="Redes" data-en="Social">Redes</span></h3>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/juan-jos%C3%A9-jerez-77b61624a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
@@ -522,26 +527,26 @@
         </div>
 
         <div class="contact-form-container">
-          <h3><i class="fas fa-paper-plane"></i> Enviame un mensaje</h3>
+          <h3><i class="fas fa-paper-plane"></i> <span data-es="Enviame un mensaje" data-en="Send me a message">Enviame un mensaje</span></h3>
           <form class="contact-form" action="https://formspree.io/f/mdklbzwr" method="POST">
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder=" " required>
-              <label for="name">Tu nombre</label>
+              <label for="name" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
             </div>
 
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder=" " required>
-              <label for="email">Tu email</label>
+              <label for="email" data-es="Tu email" data-en="Your email">Tu email</label>
             </div>
 
             <div class="form-group">
               <textarea id="message" name="message" placeholder=" " required></textarea>
-              <label for="message">Tu mensaje</label>
+              <label for="message" data-es="Tu mensaje" data-en="Your message">Tu mensaje</label>
             </div>
 
             <button type="submit">
               <i class="fas fa-paper-plane"></i>
-              Enviar mensaje
+              <span data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</span>
             </button>
           </form>
         </div>
@@ -550,7 +555,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Juan Jerez - Todos los derechos reservados</p>
+    <p data-es="© 2026 Juan Jerez - Todos los derechos reservados" data-en="© 2026 Juan Jerez - All rights reserved">© 2026 Juan Jerez - Todos los derechos reservados</p>
   </footer>
 
   <script src="assets/script.js"></script>

@@ -72,6 +72,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.95rem 1.5rem;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -1466,4 +1467,34 @@ body.dark .about-status i {
   transform: translateY(-2px);
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.lang-toggle {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

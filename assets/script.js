@@ -88,11 +88,12 @@ window.addEventListener("scroll", () => {
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = themeToggle?.querySelector("i");
 
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("theme") || "dark"; // dark por defecto
 if (savedTheme === "dark") {
   document.body.classList.add("dark");
   themeIcon?.classList.replace("fa-moon", "fa-sun");
 }
+
 
 themeToggle?.addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -102,4 +103,40 @@ themeToggle?.addEventListener("click", () => {
     isDark ? "fa-sun" : "fa-moon"
   );
   localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+// ===== Language Toggle =====
+const langToggle = document.getElementById("langToggle");
+const langLabel = langToggle?.querySelector(".lang-label");
+
+let currentLang = localStorage.getItem("lang") || "es";
+
+function applyLanguage(lang) {
+  // Update all elements with data-es / data-en
+  document.querySelectorAll("[data-es][data-en]").forEach(el => {
+    const text = lang === "en" ? el.dataset.en : el.dataset.es;
+    if (!text) return;
+    // If the element has child elements (e.g. <strong>), use innerHTML
+    if (el.dataset.en.includes("<") || el.dataset.es.includes("<")) {
+      el.innerHTML = text;
+    } else {
+      el.textContent = text;
+    }
+  });
+
+  // Update <html lang>
+  document.documentElement.lang = lang;
+
+  // Update button label
+  if (langLabel) langLabel.textContent = lang === "en" ? "ES" : "EN";
+
+  localStorage.setItem("lang", lang);
+  currentLang = lang;
+}
+
+// Apply saved language on load
+if (currentLang === "en") applyLanguage("en");
+
+langToggle?.addEventListener("click", () => {
+  applyLanguage(currentLang === "es" ? "en" : "es");
 });
