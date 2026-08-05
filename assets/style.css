@@ -424,15 +424,17 @@ header {
 
 /* ===== Experience ===== */
 .experience-timeline {
+  --tl-pad: 2.5rem;
+  --tl-line: 0.6rem;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: var(--tl-pad);
 }
 
 .timeline-line {
   position: absolute;
-  left: 0.6rem;
+  left: var(--tl-line);
   top: 0;
   bottom: 0;
   width: 2px;
@@ -442,7 +444,7 @@ header {
 
 .timeline-dot {
   position: absolute;
-  left: -2rem;
+  left: calc(var(--tl-line) - var(--tl-pad) - 7px);
   top: 2rem;
   width: 14px;
   height: 14px;
@@ -450,6 +452,7 @@ header {
   background: var(--accent);
   border: 3px solid white;
   box-shadow: 0 0 0 2px var(--accent);
+  box-sizing: border-box;
 }
 
 .experience-card {
@@ -578,7 +581,7 @@ header {
 
 @media (max-width: 640px) {
   .experience-timeline {
-    padding-left: 1.8rem;
+    --tl-pad: 1.8rem;
   }
 
   .experience-header {
