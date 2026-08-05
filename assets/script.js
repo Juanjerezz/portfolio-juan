@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const body = document.body;
 
+  // ===== Alto exacto del hero (evita el hueco por redondeo de vh/dvh) =====
+  const hero = document.querySelector(".hero");
+  if (hero) {
+    const setHeroHeight = () => {
+      hero.style.minHeight = `${window.innerHeight}px`;
+    };
+    setHeroHeight();
+    window.addEventListener("resize", setHeroHeight);
+    window.addEventListener("orientationchange", setHeroHeight);
+  }
+
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
