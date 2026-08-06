@@ -6,12 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== Alto exacto del hero (evita el hueco por redondeo de vh/dvh) =====
   const hero = document.querySelector(".hero");
   if (hero) {
+    let resizeTimer = null;
     const setHeroHeight = () => {
       hero.style.minHeight = `${window.innerHeight}px`;
     };
+    const scheduleSetHeroHeight = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(setHeroHeight, 150);
+    };
     setHeroHeight();
-    window.addEventListener("resize", setHeroHeight);
-    window.addEventListener("orientationchange", setHeroHeight);
+    window.addEventListener("resize", scheduleSetHeroHeight, { passive: true });
+    window.addEventListener("orientationchange", scheduleSetHeroHeight, { passive: true });
   }
 
   const filterButtons = document.querySelectorAll(".filter-btn");
@@ -87,6 +92,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerEl = document.querySelector("header");
   const scrollProgress = document.getElementById("scrollProgress");
 
+  // El alto scrolleable solo cambia con el layout, no en cada scroll: se
+  // cachea y se recalcula apenas en resize para evitar forzar reflow.
+  let scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  let resizeTimer2 = null;
+  window.addEventListener(
+    "resize",
+    () => {
+      clearTimeout(resizeTimer2);
+      resizeTimer2 = setTimeout(() => {
+        scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      }, 150);
+    },
+    { passive: true }
+  );
+  window.addEventListener(
+    "load",
+    () => {
+      scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    },
+    { once: true }
+  );
+
+  let scrollTicking = false;
   function updateOnScroll() {
     if (window.scrollY > 60) {
       headerEl.classList.add("scrolled");
@@ -95,13 +123,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (scrollProgress) {
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
-      scrollProgress.style.transform = `scaleX(${Math.min(progress, 1)})`;
+      const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+      scrollProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
     }
+
+    scrollTicking = false;
   }
 
-  window.addEventListener("scroll", updateOnScroll);
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!scrollTicking) {
+        scrollTicking = true;
+        requestAnimationFrame(updateOnScroll);
+      }
+    },
+    { passive: true }
+  );
   updateOnScroll();
 
   // ===== Animaciones dinámicas al hacer scroll =====
@@ -167,15 +205,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroImageShape = document.querySelector(".hero-image-shape");
 
   if (heroImageWrap && heroImageShape && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    heroImageWrap.addEventListener("mousemove", event => {
-      const rect = heroImageWrap.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      heroImageShape.style.transform = `rotateY(${x * 14}deg) rotateX(${y * -14}deg)`;
-    });
+    let heroRect = null;
+    let tiltTicking = false;
+    let pendingEvent = null;
+
+    heroImageWrap.addEventListener(
+      "mouseenter",
+      () => {
+        heroRect = heroImageWrap.getBoundingClientRect();
+      },
+      { passive: true }
+    );
+
+    heroImageWrap.addEventListener(
+      "mousemove",
+      event => {
+        pendingEvent = event;
+        if (tiltTicking) return;
+        tiltTicking = true;
+
+        requestAnimationFrame(() => {
+          if (heroRect && pendingEvent) {
+            const x = (pendingEvent.clientX - heroRect.left) / heroRect.width - 0.5;
+            const y = (pendingEvent.clientY - heroRect.top) / heroRect.height - 0.5;
+            heroImageShape.style.transform = `rotateY(${x * 14}deg) rotateX(${y * -14}deg)`;
+          }
+          tiltTicking = false;
+        });
+      },
+      { passive: true }
+    );
 
     heroImageWrap.addEventListener("mouseleave", () => {
       heroImageShape.style.transform = "";
+      heroRect = null;
     });
   }
 });
