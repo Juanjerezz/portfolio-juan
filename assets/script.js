@@ -89,6 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ===== Ver más certificaciones =====
+  const toggleCertificatesBtn = document.getElementById("toggleCertificates");
+  const certificatesContainer = document.querySelector(".certificates-container");
+
+  if (toggleCertificatesBtn && certificatesContainer) {
+    toggleCertificatesBtn.addEventListener("click", () => {
+      const isExpanded = certificatesContainer.classList.toggle("show-extra");
+      toggleCertificatesBtn.setAttribute("aria-expanded", String(isExpanded));
+      const label = toggleCertificatesBtn.querySelector("span");
+      if (label) {
+        label.dataset.es = isExpanded ? "Ver menos certificaciones" : "Ver más certificaciones";
+        label.dataset.en = isExpanded ? "Show fewer certifications" : "Show more certifications";
+        label.textContent = currentLang === "en" ? label.dataset.en : label.dataset.es;
+      }
+    });
+  }
+
   const headerEl = document.querySelector("header");
   const scrollProgress = document.getElementById("scrollProgress");
 
