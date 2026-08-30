@@ -1455,15 +1455,6 @@ body.dark .skill-item {
   border-bottom: 1px solid var(--border);
 }
 
-.about-avatar {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent);
-  flex-shrink: 0;
-}
-
 .about-profile-info {
   display: flex;
   flex-direction: column;

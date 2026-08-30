@@ -303,6 +303,15 @@ function applyLanguage(lang) {
   // Update <html lang>
   document.documentElement.lang = lang;
 
+  // Update CV download link to match the selected language
+  const cvLink = document.getElementById("cvDownloadLink");
+  if (cvLink) {
+    const href = lang === "en" ? cvLink.dataset.hrefEn : cvLink.dataset.hrefEs;
+    const filename = lang === "en" ? cvLink.dataset.downloadEn : cvLink.dataset.downloadEs;
+    if (href) cvLink.setAttribute("href", href);
+    if (filename) cvLink.setAttribute("download", filename);
+  }
+
   // Update button label
   if (langLabel) langLabel.textContent = lang === "en" ? "ES" : "EN";
 
