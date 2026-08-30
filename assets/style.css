@@ -611,6 +611,19 @@ header {
   font-weight: 700;
 }
 
+.experience-location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.experience-location i {
+  color: var(--accent);
+}
+
 .experience-date {
   white-space: nowrap;
   background: var(--surface-soft);
