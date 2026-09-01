@@ -771,6 +771,11 @@ header {
   border: 1px solid #e4edf4;
 }
 
+.project-card img.project-image-contain {
+  object-fit: contain;
+  background: #05070d;
+}
+
 .project-card h3 {
   color: var(--primary);
   font-size: 1.22rem;
